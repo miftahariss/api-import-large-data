@@ -63,7 +63,12 @@ php artisan jwt:secret
 php artisan queue:work redis --queue=product-import --tries=3 --timeout=300
 ```
 
-9. Start application:
+9. Makesure redis server is started:
+```bash
+service redis-server start
+```
+
+10. Start application:
 ```bash
 php artisan serve
 ```
