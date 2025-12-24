@@ -53,12 +53,17 @@ php artisan migrate
 php artisan db:seed
 ```
 
-7. Start queue worker:
+7. Generate JWT Secret:
+```bash
+php artisan jwt:secret
+```
+
+8. Start queue worker:
 ```bash
 php artisan queue:work redis --queue=product-import --tries=3 --timeout=300
 ```
 
-8. Start application:
+9. Start application:
 ```bash
 php artisan serve
 ```
